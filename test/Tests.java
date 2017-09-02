@@ -12,6 +12,8 @@ public class Tests {
         WordList wordList = new WordList();
         wordList.setWords("BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA");
         assertEquals("BONES", wordList.getWord(0));
+        wordList.setWords("CHIPS,FUZZBALL,SANDY,WINKY,MERLIN");
+        assertEquals("CHIPS",wordList.getWord(0));
     }
 
 }
