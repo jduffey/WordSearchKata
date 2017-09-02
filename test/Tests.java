@@ -23,4 +23,11 @@ public class Tests {
         assertEquals("KHAN",wordList.getWord(1));
     }
 
+    @Test
+    public void shouldReturnLastWordFromWordList(){
+        WordList wordList = new WordList();
+        wordList.setWords("BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA");
+        assertEquals("UHURA",wordList.getWord(6));
+    }
+
 }

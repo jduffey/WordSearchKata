@@ -17,8 +17,12 @@ public class WordList {
         String wordsToEat = words;
 
         for (int i = 0; i <= whichWord; i++) {
-            wordToGet = wordsToEat.substring(0, wordsToEat.indexOf(","));
-            wordsToEat = wordsToEat.substring(wordsToEat.indexOf(",") + 1, wordsToEat.length());
+            if (wordsToEat.contains(",")) {
+                wordToGet = wordsToEat.substring(0, wordsToEat.indexOf(","));
+                wordsToEat = wordsToEat.substring(wordsToEat.indexOf(",") + 1, wordsToEat.length());
+            } else {
+                wordToGet = wordsToEat;
+            }
         }
 
         return wordToGet;
