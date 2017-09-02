@@ -11,8 +11,17 @@ public class WordList {
         this.words = words;
     }
 
-    public String getWord(int i) {
-        return words.substring(0,words.indexOf(","));
+    public String getWord(int whichWord) {
+
+        String wordToGet = "";
+        String wordsToEat = words;
+
+        for (int i = 0; i <= whichWord; i++) {
+            wordToGet = wordsToEat.substring(0, wordsToEat.indexOf(","));
+            wordsToEat = wordsToEat.substring(wordsToEat.indexOf(",") + 1, wordsToEat.length());
+        }
+
+        return wordToGet;
     }
 
 }

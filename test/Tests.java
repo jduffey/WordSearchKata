@@ -16,4 +16,11 @@ public class Tests {
         assertEquals("CHIPS",wordList.getWord(0));
     }
 
+    @Test
+    public void shouldReturnSecondWordFromWordList(){
+        WordList wordList = new WordList();
+        wordList.setWords("BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA");
+        assertEquals("KHAN",wordList.getWord(1));
+    }
+
 }
